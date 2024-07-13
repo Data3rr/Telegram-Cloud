@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Cloud</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='homestyle.css') }}">
+</head>
+<body>
+    <div class="topnav">
+        <a class="navbartitle">Telegram Cloud</a>
+        <a class="active" href="/">Home</a>
+        <a href="/upload">Upload File</a>
+    </div>
+    <div class="container">
+        <h1>Telegram Cloud</h1>
+        <hr />
+        <h2>Stats</h2>
+        <ul class="stats-list">
+            <li>Current state: {{ state }}</li>
+            <li>Number of files: {{ file_number }}</li>
+        </ul>
+        <table id="fileTable">
+            <thead>
+                <tr>
+                    <th>Fichier</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--Javascript zone-->
+            </tbody>
+        </table>
+    </div>
+    <script src="{{ url_for('static', filename='home_script.js') }}"></script>
+</body>
+</html>
